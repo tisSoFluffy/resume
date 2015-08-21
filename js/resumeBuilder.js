@@ -17,5 +17,17 @@ var formattedRole = HTMLheaderRole.replace("%data%", "Web Developer");
 $("#header").prepend(formattedName);
 $("#header").append(formattedRole);
 
-var Array = [];
-Array.last() = 
+skills = ["dancing", "biking", "hiking", "drone building", "quadcopter racing, 250 class"];
+
+var bio = {
+    "name": "Josh Fritz",
+    "role": "Team Lead Safety Systems",
+    "contact info": "111-000-1234",
+    "picture url": "http:google.com",
+    "welcome message" : "Welcome to the thunderdome...",
+    "skills": skills
+};
+
+for (data in bio){
+    $("#main").append(bio[data]);
+};
