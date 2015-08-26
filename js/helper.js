@@ -69,6 +69,13 @@ $(document).ready(function() {
   });
 });
 
+
+function inName(full_name){
+  temp_name = full_name.trim().split(" ");
+  first_name = temp_name[0][0].toUpperCase() + temp_name[0].slice(1);
+  last_name = temp_name[1].toUpperCase();
+  return first_name + " " + last_name;
+}
 /*
 The next few lines about clicks are for the Collecting Click Locations quiz in Lesson 2.
 */
@@ -85,9 +92,17 @@ function logClicks(x,y) {
 }
 
 $(document).click(function(loc) {
-  // your code goes here!
+  logClicks(loc.pageX, loc.pageY);
 });
 
+function locationizer(_work_obj) {
+  var work = _work_obj;
+  var locations = [];
+  for(job in work.jobs){
+    locations.push(work.jobs[job].location);
+  }
+  return locations;
+}
 
 
 /*
@@ -227,6 +242,7 @@ function initializeMap() {
   pinPoster(locations);
 
 }
+
 
 /*
 Uncomment the code below when you're ready to implement a Google Map!

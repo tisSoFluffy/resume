@@ -1,22 +1,3 @@
-// $("#main").append(["Josh Fritz"]);
-
-var email = "joshua.l.fritz@gmail.com";
-var udacityEmail =
-    email.replace("gmail", "udacity");
-console.log(email);
-console.log(udacityEmail);
-
-var awesomeThoughts = "My name is Josh and I am awesome!";
-var funThoughts =
-    awesomeThoughts.replace("awesome", "fun");
-
-//$("#main").append(funThoughts);
-var formattedName = HTMLheaderName.replace("%data%", "Josh Fritz");
-var formattedRole = HTMLheaderRole.replace("%data%", "Web Developer");
-
-$("#header").prepend(formattedName);
-$("#header").append(formattedRole);
-
 skills = ["dancing", "biking", "hiking", "drone building", "quadcopter racing, 250 class"];
 
 var bio = {
@@ -28,6 +9,90 @@ var bio = {
     "skills": skills
 };
 
-for (data in bio){
-    $("#main").append(bio[data]);
+var education = {
+    "schools": [
+        {
+            "name": "Bellevue University",
+            "city": "Bellevue",
+            "state": "NE",
+            "degree": "Business Information Systems",
+            "major": "BA",
+            "year": "2010"
+        },
+        {
+            "name": "UP Java Development Training",
+            "city": "Omaha",
+            "state": "NE",
+            "year": "2015"
+        },
+        {
+            "name": "Leadership Training",
+            "city": "Okinawa",
+            "country": "Japan",
+            "year": "2006"
+        },
+        {
+            "name": "Counseling Training",
+            "city": "Okinawa",
+            "country": "Japan",
+            "year": "2005"
+        }
+    ]
 };
+var work = {
+  "jobs": [
+      {
+          "title": "Tactical Data Network Specialist",
+          "company": "United States Marine Corps",
+          "location":"The World",
+          "dates":"July 2003- July 2007",
+          "description":
+              "Supervise a staff of 20 technicians, prioritize projects and workload, schedule assignments, and complete critical time-sensitive tasks. Was held accountable for the actions of my team by senior leadership"
+      },
+      {
+          "title": "LAN Administrator",
+          "company": "Infogroup",
+          "location":"Ralston, NE",
+          "dates": "July 2007-February 2010 ",
+          "description":
+
+                  "Provide technical support and customer service for IT-related problems across the company for both local and remote users" +
+                  "Resolve application and software system problems impacting production" +
+                  "Ensure workstations across the company are properly patched for vulnerabilities" +
+                  "Create and maintain documentation for the Helpdesk and LAN Administration teams for use in configuration and maintenance procedures" +
+                  "Create and maintain documentation for users to easily complete various IT tasks"
+
+      },
+      {
+          "title": "Executive LAN Administrator",
+          "company": "Infogroup",
+          "location":"Ralston, NE",
+          "dates": "February 2010-May 2011",
+          "description":
+              "Provide 24/7 “on-call” support for the leadership team, to include iPhone and MAC support"+
+              "See LAN Administrator duties section at Infogroup below"
+
+      },
+      {
+          "title": "LAN Administrator",
+          "company": "Union Pacific",
+          "location":"Omaha, NE",
+          "dates": "May 2011- Aug 2014",
+          "description":
+              "Provide technical support and customer service for IT-related problems across the company for both local and remote users"+
+              "Resolve application and software system problems impacting production"+
+              "Log, update, and analyze requests in TRM" +
+              "Create and maintain documentation for the team to use for troubleshooting procedures"
+      },
+      {
+          "title": "Software Tech Lead",
+          "company": "Union Pacific",
+          "location":"Omaha, NE",
+          "dates": "Aug 2014 – Present",
+          "description":
+              "Lead a team of seven developers to debug, enhance and maintain three safety software systems"
+      }
+  ]
+};
+
+
