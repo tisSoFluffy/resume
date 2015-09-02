@@ -13,28 +13,27 @@ var education = {
     "schools": [
         {
             "name": "Bellevue University",
-            "city": "Bellevue",
-            "state": "NE",
+            "location": "Bellevue NE",
             "degree": "Business Information Systems",
             "major": "BA",
             "year": "2010"
         },
         {
             "name": "UP Java Development Training",
-            "city": "Omaha",
-            "state": "NE",
+            "location": "Omaha NE",
+            "major": "NA",
             "year": "2015"
         },
         {
             "name": "Leadership Training",
-            "city": "Okinawa",
-            "country": "Japan",
+            "location": "Okinawa Japan",
+            "major": "NA",
             "year": "2006"
         },
         {
             "name": "Counseling Training",
-            "city": "Okinawa",
-            "country": "Japan",
+            "location": "Okinawa Japan",
+            "major": "NA",
             "year": "2005"
         }
     ]

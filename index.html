@@ -113,7 +113,7 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
         an opening and closing set of slash asterisks for block comments.
     */
 
-
+    //Start Bio addition
     if(bio.skills.length > 0){
       $("#header").append(HTMLskillsStart);
       var formattedSkill = HTMLskills.replace("%data%", bio.skills[0]);
@@ -146,8 +146,26 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
       }
     }
 
+    //Start Education Portfolio
+
+    displayEducation = function(){
+      if(education.schools.length > 0){
+        for(school in education.schools){
+          $("#education").append(HTMLschoolStart);
+          var formattedName = HTMLschoolName.replace("%data%", education.schools[school].name);
+          var formattedLocation = HTMLschoolLocation.replace("%data%", education.schools[school].location);
+          var formattedDate = HTMLschoolDates.replace("%data%", education.schools[school].year);
+          var formattedMajor = HTMLschoolMajor.replace("%data%", education.schools[school].major);
+          $(".education-entry:last").append(formattedName);
+          $(".education-entry:last").append(formattedMajor);
+          $(".education-entry:last").append(formattedDate);
+          $(".education-entry:last").append(formattedLocation);
+        }
+      }
+    }
 
     displayWork();
+    displayEducation();
 
 
     $("#main").append(internationalizeButton);
