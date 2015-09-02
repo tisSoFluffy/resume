@@ -1,13 +1,43 @@
-skills = ["dancing", "biking", "hiking", "drone building", "quadcopter racing, 250 class"];
+skills = [
+    {
+        "name": "dancing",
+        "imgUrl": "http://www.fontsaddict.com/images/icons/png/thumb/21097.png",
+        "altText": "International Ballroom Dancing"
+    },
+    {
+        "name": "biking",
+        "imgUrl": "http://www.fontsaddict.com/images/icons/png/thumb/21125.png",
+        "altText": "road and mountain biking"
+    },
+    {
+        "name": "drone building",
+        "imgUrl": "http://www.fontsaddict.com/images/icons/png/thumb/34170.png",
+        "altText": "Build and fly quadcopters"
+    },
+    {
+        "name": "3d printing",
+        "imgUrl": "http://www.fontsaddict.com/images/icons/png/thumb/28360.png",
+        "altText": "First quadcopter was a 3d printed quadcopter :)"
+    }];
 
 var bio = {
     "name": "Josh Fritz",
     "role": "Team Lead Safety Systems",
-    "contact info": "111-000-1234",
-    "picture url": "http:google.com",
-    "welcome message" : "Welcome to the thunderdome...",
-    "skills": skills
+    "contact": "801-913-2165",
+    "welcome_message" : "Welcome to the thunderdome...",
+    "skills": skills,
+    "imageUrl": "images/profile_pic.jpg",
+    "email": "joshua.l.fritz@gmail.com"
 };
+
+var projects = [
+        {
+            "title": "portfolio_1",
+            "dates": "Jul - Aug 2015",
+            "description": "My first git finished project from Udacity. I'm proud to have come this far with an amazing course and great help from the Udacity team. I look forward to finishing my courses.",
+            "imageUrl": "http://michaelsseaver.com/wp-content/uploads/2013/08/learn.jpg"
+        }
+    ];
 
 var education = {
     "schools": [
@@ -38,6 +68,7 @@ var education = {
         }
     ]
 };
+
 var work = {
   "jobs": [
       {
@@ -93,5 +124,74 @@ var work = {
       }
   ]
 };
+
+displayWork = function() {
+    for (job in work.jobs) {
+        $("#workExperience").append(HTMLworkStart);
+        var formattedEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].title);
+        var formattedLocation = HTMLworkLocation.replace("%data%", work.jobs[job].location);
+        var formattedDates = HTMLworkDates.replace("%data%", work.jobs[job].dates);
+        var formattedDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description);
+        $(".work-entry:last").append(formattedEmployer);
+        $(".work-entry:last").append(formattedLocation);
+        $(".work-entry:last").append(formattedDates);
+
+
+        $(".work-entry:last").append(formattedDescription);
+    }
+}
+
+displayEducation = function(){
+    if(education.schools.length > 0){
+        for(school in education.schools){
+            $("#education").append(HTMLschoolStart);
+            var formattedName = HTMLschoolName.replace("%data%", education.schools[school].name);
+            var formattedLocation = HTMLschoolLocation.replace("%data%", education.schools[school].location);
+            var formattedDate = HTMLschoolDates.replace("%data%", education.schools[school].year);
+            var formattedMajor = HTMLschoolMajor.replace("%data%", education.schools[school].major);
+            $(".education-entry:last").append(formattedName);
+            $(".education-entry:last").append(formattedDate);
+            $(".education-entry:last").append(formattedLocation);
+            $(".education-entry:last").append(formattedMajor);
+        }
+    }
+}
+
+displayProject = function(){
+    for (p in projects){
+        $("#projects").append(HTMLprojectStart);
+        var formattedHTMLprojectTitle = HTMLprojectTitle.replace("%data%", projects[p].title);
+        var formattedHTMLprojectDates = HTMLprojectDates.replace("%data%", projects[p].dates);
+        var formattedHTMLprojectDescription = HTMLprojectDescription.replace("%data%", projects[p].description);
+        var formattedHTMLprojectImage = HTMLprojectImage.replace("%data%", projects[p].imageUrl);
+        $(".project-entry:last").append(formattedHTMLprojectTitle);
+        $(".project-entry:last").append(formattedHTMLprojectDates);
+        $(".project-entry:last").prepend(formattedHTMLprojectImage);
+        $(".project-entry:last").append(formattedHTMLprojectDescription);
+    }
+}
+
+displayBio = function() {
+    var formattedHTMLcontactGeneric = HTMLcontactGeneric.replace("%data%", bio.contact);
+    $("#header").append(formattedHTMLcontactGeneric);
+    var formattedHTMLemail = HTMLemail.replace("%data%", bio.email);
+    $("#header").prepend(formattedHTMLemail);
+    var formattedHTMLbioPic = HTMLbioPic.replace("%data%", bio.imageUrl)
+    $("#header").prepend(formattedHTMLbioPic);
+    if (bio.skills.length > 0) {
+        $("#header").append(HTMLskillsStart);
+        for(skill in skills) {
+            var formattedSkillImgUrl = HTMLskillsImg.replace("%data%", skills[skill].imgUrl);
+            $("#skills").append(formattedSkillImgUrl);
+            //Place Holder for Alt text updating
+            //var formattedSkillAltText = HTMLskillsAltText.replace("%data%", skills[skill].altText);
+            //$("#skills").append(formattedSkillAltText);
+        }
+        var formattedHeaderRole = HTMLheaderRole.replace("%data%", bio.role);
+        $("#header").prepend(formattedHeaderRole);
+        var formattedHeaderName = HTMLheaderName.replace("%data%", bio.name);
+        $("#header").prepend(formattedHeaderName);
+    }
+}
 
 
