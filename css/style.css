@@ -29,6 +29,7 @@ h2 {
 }
 
 h3 {
+  font-family: 'Tangerine', cursive;
   font-style: italic;
   font-size: 20px;
   color: #000000;
@@ -87,15 +88,21 @@ a {
 }
 
 #skillsH3 {
+  font-family: 'Tangerine', cursive;
+  font-size: 3em;
   color: #F5AE23;
   display: none;
 }
 
 .orange {
+  font-family: 'Tangerine', cursive;
+  font-size: 2em;
   background-color: #F5AE23;
 }
 
 .orange-text {
+  font-family: 'Tangerine', cursive;
+  font-size: 2em;
   color: #F5AE23;
 }
 
@@ -166,6 +173,9 @@ img {
   display: inline-block;
 }
 
+#contactInfo {
+  display: inline;
+}
 span {
   padding: 5px;
 }

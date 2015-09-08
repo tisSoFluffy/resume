@@ -17,7 +17,7 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
 <head>
   <!-- This tells the browser how to read the document. -->
   <meta charset="utf-8">
-
+  <link href='https://fonts.googleapis.com/css?family=Tangerine' rel='stylesheet' type='text/css'>
   <!-- Tells the browser what the title of this page should be. -->
   <title>Resume</title>
 
@@ -47,7 +47,7 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
   Uncomment the <script> tag below when you're ready to add an interactive
   Google Map to your resume!
   -->
-  <!-- <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places"></script> -->
+   <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?libraries=places"></script>
 
   <meta name="viewport" content="width=device-width">
 </head>
@@ -118,12 +118,10 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
 
 
 
-    displayBio();
+    bio.display();
     displayWork();
     displayEducation();
-    displayProject();
-
-    $("#main").append(internationalizeButton);
+    work.display();
 
     if(document.getElementsByClassName('flex-item').length === 0) {
       document.getElementById('topContacts').style.backgroundColor = 'black';
