@@ -114,11 +114,7 @@ a {
 .gray {
   background-color: #F3F3F3;
   padding-bottom: 10px;
-  clear:both;
-}
-
-.project-img {
-
+  clear: both;
 }
 
 .dark-gray {
@@ -182,6 +178,10 @@ span {
 
 #letsConnect {
   text-align: center;
+}
+
+#name{
+
 }
 
 @media only screen and (max-width: 1024px) {
