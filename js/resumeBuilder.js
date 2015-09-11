@@ -6,7 +6,7 @@ var bio = {
         "email": "joshua.l.fritz@gmail.com",
         "github": "github.com/tissofluffy",
         "twitter": "Twitter is not for me",
-        "location": "1400 Douglas St, Omaha, NE 68102"
+        "location": "Omaha NE"
         },
     "welcomeMessage" : "Welcome to the thunderdome...",
     "skills": [
@@ -51,8 +51,8 @@ var bio = {
         $("#header").append(formattedHTMLWelcomeMsg);
         if (bio.skills.length > 0) {
             $("#header").append(HTMLskillsStart);
-            for(skill in skills.skills) {
-                var formattedSkillImgUrl = HTMLskillsImg.replace("%data%", skills[skill].imgUrl + " \" alt=\"" + skills[skill].altText);
+            for(skill in bio.skills) {
+                var formattedSkillImgUrl = HTMLskillsImg.replace("%data%", bio.skills[skill].imgUrl + " \" alt=\"" + bio.skills[skill].altText);
                 $("#skills").append(formattedSkillImgUrl);
                 //Place Holder for Alt text updating
                 //var formattedSkillAltText = HTMLskillsAltText.replace("%data%", skills[skill].altText);
@@ -65,7 +65,6 @@ var bio = {
         }
     }
 };
-
 $("#mapDiv").append(googleMap);
 var projects = {
     "projects": [
@@ -94,26 +93,26 @@ var education = {
     "schools": [
         {
             "name": "Bellevue University",
-            "location": "1400 Douglas St, Omaha, NE 68102",
+            "location": "Omaha NE",
             "degree": "Business Information Systems",
             "major": "BS",
             "year": "2010"
         },
         {
             "name": "UP Java Development Training",
-            "location": "1400 Douglas St, Omaha, NE 68102",
+            "location": "Omaha NE",
             "major": "NA",
             "year": "2015"
         },
         {
             "name": "Leadership Training",
-            "location": "1400 Douglas St, Omaha, NE 68102",
+            "location": "Omaha NE",
             "major": "NA",
             "year": "2006"
         },
         {
             "name": "Counseling Training",
-            "location": "1400 Douglas St, Omaha, NE 68102",
+            "location": "Omaha NE",
             "major": "NA",
             "year": "2005"
         }
@@ -134,13 +133,12 @@ var education = {
         }
     }
 };
-
 var work = {
   "jobs": [
       {
           "title": "Tactical Data Network Specialist",
           "company": "United States Marine Corps",
-          "location":"1400 Douglas St, Omaha, NE 68102",
+          "location":"Omaha NE",
           "dates":"July 2003- July 2007",
           "description":
               "Supervise a staff of 20 technicians, prioritize projects and workload, schedule assignments, and complete critical time-sensitive tasks. Was held accountable for the actions of my team by senior leadership"
@@ -148,7 +146,7 @@ var work = {
       {
           "title": "LAN Administrator",
           "company": "Infogroup",
-          "location":"1400 Douglas St, Omaha, NE 68102",
+          "location":"Omaha NE",
           "dates": "July 2007-February 2010 ",
           "description":
 
@@ -162,7 +160,7 @@ var work = {
       {
           "title": "Executive LAN Administrator",
           "company": "Infogroup",
-          "location":"1400 Douglas St, Omaha, NE 68102",
+          "location":"Omaha NE",
           "dates": "February 2010-May 2011",
           "description":
               "Provide 24/7 “on-call” support for the leadership team, to include iPhone and MAC support"+
@@ -172,7 +170,7 @@ var work = {
       {
           "title": "LAN Administrator",
           "company": "Union Pacific",
-          "location":"1400 Douglas St, Omaha, NE 68102",
+          "location":"Omaha NE",
           "dates": "May 2011- Aug 2014",
           "description":
               "Provide technical support and customer service for IT-related problems across the company for both local and remote users"+
@@ -183,7 +181,7 @@ var work = {
       {
           "title": "Software Tech Lead",
           "company": "Union Pacific",
-          "location":"1400 Douglas St, Omaha, NE 68102",
+          "location":"Omaha NE",
           "dates": "Aug 2014 – Present",
           "description":
               "Lead a team of seven developers to debug, enhance and maintain three safety software systems"
